@@ -34,7 +34,9 @@ class StudentController extends Controller
     public function show(string $id)
     {
         $title = 'sistem sekolah - detail siswa';
-        return view('students.show');
+        return view('students.show',[
+            'title'=> $title
+        ]);
     }
 
     public function create()
@@ -61,7 +63,9 @@ class StudentController extends Controller
     public function edit(string $id)
     {
         $title = 'sistem sekolah - ubah data siswa';
-        return view('students.edit');
+        return view('students.edit', [
+            'title'=> $title
+        ]);
     }
     
 
