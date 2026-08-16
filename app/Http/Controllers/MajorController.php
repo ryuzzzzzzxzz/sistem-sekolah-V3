@@ -62,7 +62,10 @@ class MajorController extends Controller
      */
     public function create()
     {
-        return "menampilkan form untuk menambahkan jurusan baru";
+        return view('majors.index',[
+                            'title'=> 'sistem sekolah - tambah jurusan',
+                        ]
+                    );
     }
 
     /**
@@ -78,7 +81,10 @@ class MajorController extends Controller
      */
     public function show(string $id)
     {
-        return "menampilkan detail jurusan dengan ID: {$id}";
+        return view('majors.index',[
+                            'title'=> 'sistem sekolah - detail jurusan',
+                        ]
+                    );
     }
 
     /**

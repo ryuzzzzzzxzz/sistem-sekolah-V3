@@ -56,13 +56,21 @@ class TeacherController extends Controller
 
     public function show(string $id)
     {
-        return "menampilkan detail siswa dengan ID: {$id}";
+        $title = 'sistem sekolah - detail guru';
+        return view('teachers.show',[
+            'title'=> $title
+        ]);
     }
 
-    public function create()
+   public function create()
     { 
-        return "menampilkan form untuk menambahkan siswa baru";
+        $title = 'sistem sekolah - Tambah data guru';
+        return view('teachers.create',[
+            'title' => $title
+        ]
+        );
     }
+ 
 
     public function store()
     {
@@ -81,6 +89,11 @@ class TeacherController extends Controller
 
     public function edit(string $id)
     {
-        return "menampilkan form untuk mengedit data siswa dengan ID: {$id}";
+           $title = 'sistem sekolah - Edit data guru';     
+        return view('teachers.edit',[
+            'title' => $title
+        ]
+        );
+        
     }
 }

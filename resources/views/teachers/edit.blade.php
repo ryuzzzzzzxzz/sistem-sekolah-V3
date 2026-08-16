@@ -17,7 +17,7 @@
                     class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">NIS</label>
                 <input type="text" id="nis" name="nis" value="2024001"
                     class="w-full border border-[#D9D6CD] bg-[#FCFBF8] px-3.5 py-2.5 text-sm focus:border-[#A16207] focus:bg-white focus:outline-none">
-            </div>
+            </div> I want to walk to my purs I want to walk to my pursuit next
 
             <div>
                 <label for="name"

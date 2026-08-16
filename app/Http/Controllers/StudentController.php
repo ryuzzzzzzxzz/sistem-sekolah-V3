@@ -33,16 +33,20 @@ class StudentController extends Controller
 
     public function show(string $id)
     {
-        $title = 'sistem sekolah - detail siswa';
+        $title = 'sistem sekolah - detail data siswa';
         return view('students.show',[
-            'title'=> $title
-        ]);
+            'title' => $title
+        ]
+        );
     }
 
     public function create()
     { 
-        $title = 'sistem sekolah - catat siswa baru';
-        return view('students.create');
+        $title = 'sistem sekolah - tambah data siswa';
+        return view('students.create',[
+            'title' => $title
+        ]
+        );
     }
 
     public function store()

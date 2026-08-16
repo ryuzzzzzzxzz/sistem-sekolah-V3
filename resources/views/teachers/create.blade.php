@@ -7,15 +7,15 @@
             <a href="" class="text-xs uppercase tracking-[0.15em] text-slate-400 hover:text-[#A16207]">&larr; Buku
                 Induk</a>
             <h1 class="font-display mt-2 text-3xl font-semibold text-[#16213A]">Catat Siswa Baru</h1>
-            <p class="mt-1 text-sm text-slate-500">Isi data untuk mendaftarkan siswa ke buku induk.</p>
+            <p class="mt-1 text-sm text-slate-500">Isi data untuk mendaftarkan guru ke buku induk.</p>
         </div>
 
         <form action="" method="POST" class="space-y-6 border border-[#E5E3DB] bg-white p-8">
 
             <div>
                 <label for="nis"
-                    class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">NIS</label>
-                <input type="text" id="nis" name="nis" placeholder="Contoh: 2024010"
+                    class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">NIP</label>
+                <input type="text" id="nip" name="nip" placeholder="Contoh: 2024010"
                     class="w-full border border-[#D9D6CD] bg-[#FCFBF8] px-3.5 py-2.5 text-sm placeholder:text-slate-400 focus:border-[#A16207] focus:bg-white focus:outline-none">
             </div>
 
@@ -23,7 +23,7 @@
                 <label for="name"
                     class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">Nama
                     Lengkap</label>
-                <input type="text" id="name" name="name" placeholder="Nama lengkap siswa"
+                <input type="text" id="name" name="name" placeholder="Nama lengkap guru"
                     class="w-full border border-[#D9D6CD] bg-[#FCFBF8] px-3.5 py-2.5 text-sm placeholder:text-slate-400 focus:border-[#A16207] focus:bg-white focus:outline-none">
             </div>
 
@@ -39,9 +39,9 @@
             </div>
 
             <div>
-                <label for="major"
+                <label for="subject"
                     class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">Jurusan</label>
-                <select id="major" name="major"
+                <select id="subject" name="subject"
                     class="w-full border border-[#D9D6CD] bg-[#FCFBF8] px-3.5 py-2.5 text-sm focus:border-[#A16207] focus:bg-white focus:outline-none">
                     <option value="">Pilih jurusan</option>
                     <option value="">AKL</option>
@@ -53,8 +53,18 @@
             <div>
                 <label for="class"
                     class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">Kelas</label>
-                <input type="text" id="class" name="class" placeholder="Contoh: X AKL 1"
+                <input type="text" id="phone_number" name="phone_number" placeholder="Contoh: 08511111111"
                     class="w-full border border-[#D9D6CD] bg-[#FCFBF8] px-3.5 py-2.5 text-sm placeholder:text-slate-400 focus:border-[#A16207] focus:bg-white focus:outline-none">
+            </div>
+
+            div>
+                <label for="status"
+                    class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">Status</label>
+                <select id="gender" name="gender"
+                    class="w-full border border-[#D9D6CD] bg-[#FCFBF8] px-3.5 py-2.5 text-sm focus:border-[#A16207] focus:bg-white focus:outline-none">
+                    <option value="L">Aktif</option>
+                    <option value="P">Tidak Aktif</option>
+                </select>
             </div>
 
             <div class="flex justify-end gap-4 border-t border-[#EFEDE6] pt-6">

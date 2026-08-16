@@ -7,7 +7,7 @@
 <head> 
  <meta charset="UTF-8"> 
  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>Lembar Siswa - Sistem Sekolah</title> 
+<title>Lembar Jurusan - Sistem Sekolah</title> 
 @vite(['resources/css/app.css', 'resources/js/app.js']) 
 
 </head> 
@@ -30,7 +30,7 @@
 
              <span class="font-display block text-lg font-semibold leading-none">Sistem Sekolah</span> 
 
-             <span class="text-[11px] uppercase tracking-[0.2em] text-white/50">Buku Induk Guru</span> 
+             <span class="text-[11px] uppercase tracking-[0.2em] text-white/50">Buku Induk Jurusan</span> 
             </span> 
 
         </a> 
@@ -72,11 +72,11 @@
 
          <div> 
 
-             <p class="mb-1 text-[11px] uppercase tracking-[0.2em] text-[#A16207]">Lembar Guru</p> 
+             <p class="mb-1 text-[11px] uppercase tracking-[0.2em] text-[#A16207]">Lembar Jurusan</p> 
 
-             <h1 class="font-display text-3xl font-semibold text-[#16213A]">Budi Santoso</h1> 
+             <h1 class="font-display text-3xl font-semibold text-[#16213A]">Akuntansi Dasar</h1> 
 
-             <p class="mt-1 font-mono text-xs text-slate-500">NIP 198501012024</p> 
+             <p class="mt-1 font-mono text-xs text-slate-500">ID 1</p> 
 
          </div> 
 
@@ -92,31 +92,23 @@
 
      <div class="flex justify-between px-8 py-4"> 
 
-     <dt class="uppercase tracking-[0.1em] text-xs text-slate-400">NIP</dt> 
+     <dt class="uppercase tracking-[0.1em] text-xs text-slate-400">ID</dt> 
 
-     <dd class="font-medium text-[#16213A]">198501012024</dd> 
-
-     </div> 
-
-     <div class="flex justify-between px-8 py-4"> 
-
-     <dt class="uppercase tracking-[0.1em] text-xs text-slate-400">Nama Lengkap</dt> 
-
-     <dd class="font-medium text-[#16213A]">Budi Santoso</dd> 
+     <dd class="font-medium text-[#16213A]">1</dd> 
 
      </div> 
 
      <div class="flex justify-between px-8 py-4"> 
 
-     <dt class="uppercase tracking-[0.1em] text-xs text-slate-400">Jenis Kelamin</dt> 
+     <dt class="uppercase tracking-[0.1em] text-xs text-slate-400">Kode</dt> 
 
-     <dd class="font-medium text-[#16213A]">Laki-laki</dd> 
+     <dd class="font-medium text-[#16213A]">AKL</dd> 
 
      </div> 
 
      <div class="flex justify-between px-8 py-4"> 
 
-     <dt class="uppercase tracking-[0.1em] text-xs text-slate-400">Jurusan</dt> 
+     <dt class="uppercase tracking-[0.1em] text-xs text-slate-400">Nama Jurusan</dt> 
 
      <dd class="font-medium text-[#16213A]">Akuntansi Dasar</dd> 
 
@@ -124,17 +116,25 @@
 
      <div class="flex justify-between px-8 py-4"> 
 
-     <dt class="uppercase tracking-[0.1em] text-xs text-slate-400">Nomor Telepon</dt> 
+     <dt class="uppercase tracking-[0.1em] text-xs text-slate-400">Deskripsi</dt> 
 
-     <dd class="font-medium text-[#16213A]">081234560001</dd> 
+     <dd class="font-medium text-[#16213A]">Program keahlian yang membekali murid dengan kompetensi pencatatan dan pelaporan keuangan.</dd> 
 
      </div> 
 
      <div class="flex justify-between px-8 py-4"> 
 
-     <dt class="uppercase tracking-[0.1em] text-xs text-slate-400">Status</dt> 
+     <dt class="uppercase tracking-[0.1em] text-xs text-slate-400">Jurusan</dt> 
 
-     <dd class="font-medium text-[#16213A]">Aktif</dd> 
+     <dd class="font-medium text-[#16213A]">RPL</dd> 
+
+     </div> 
+
+     <div class="flex justify-between px-8 py-4"> 
+
+     <dt class="uppercase tracking-[0.1em] text-xs text-slate-400">Kelas</dt> 
+
+     <dd class="font-medium text-[#16213A]">XII AKL 1</dd> 
 
      </div> 
     
