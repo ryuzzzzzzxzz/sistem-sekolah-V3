@@ -11,50 +11,51 @@ class MajorController extends Controller
      */
     public function index()
     {
-       $majors = [
+        $majors = [
 
-                    [
+            [
 
-                        'id' => 1,
+                'id' => 1,
 
-                        'code' => 'AKL',
+                'code' => 'AKL',
 
-                        'name' => 'Akuntansi dan Keuangan Lembaga',
+                'name' => 'Akuntansi dan Keuangan Lembaga',
 
-                        'description' => 'Program keahlian yang membekali murid dengan kompetensi pencatatan dan pelaporan keuangan.',
+                'description' => 'Program keahlian yang membekali murid dengan kompetensi pencatatan dan pelaporan keuangan.',
 
-                    ],
+            ],
 
-                    [
+            [
 
-                        'id' => 2,
+                'id' => 2,
 
-                        'code' => 'TKJ',
+                'code' => 'TKJ',
 
-                        'name' => 'Teknik Komputer dan Jaringan',
+                'name' => 'Teknik Komputer dan Jaringan',
 
-                         'description' => 'Program keahlian yang membekali murid dengan kompetensi instalasi, konfigurasi, dan pemeliharaan jaringan komputer.',
+                'description' => 'Program keahlian yang membekali murid dengan kompetensi instalasi, konfigurasi, dan pemeliharaan jaringan komputer.',
 
-                    ],
+            ],
 
-                    [
+            [
 
-                            'id' => 3,
+                'id' => 3,
 
-                            'code' => 'BD',
+                'code' => 'BD',
 
-                            'name' => 'Bisnis Digital',
+                'name' => 'Bisnis Digital',
 
-                            'description' => 'Program keahlian yang membekali murid dengan kompetensi pemasaran dan pengelolaan bisnis berbasis digital.',
+                'description' => 'Program keahlian yang membekali murid dengan kompetensi pemasaran dan pengelolaan bisnis berbasis digital.',
 
-                    ],
+            ],
 
-                    ];
-                    return view('majors.index',[
-                            'title'=> 'sistem sekolah - daftar jurusan',
-                            'majors'=> $majors
-                        ]
-                    );
+        ];
+
+        return view('majors.index', [
+            'title' => 'sistem sekolah - daftar jurusan',
+            'majors' => $majors,
+        ]
+        );
     }
 
     /**
@@ -62,10 +63,51 @@ class MajorController extends Controller
      */
     public function create()
     {
-        return view('majors.index',[
-                            'title'=> 'sistem sekolah - tambah jurusan',
-                        ]
-                    );
+        $majors = [
+
+            [
+
+                'id' => 1,
+
+                'code' => 'AKL',
+
+                'name' => 'Akuntansi dan Keuangan Lembaga',
+
+                'description' => 'Program keahlian yang membekali murid dengan kompetensi pencatatan dan pelaporan keuangan.',
+
+            ],
+
+            [
+
+                'id' => 2,
+
+                'code' => 'TKJ',
+
+                'name' => 'Teknik Komputer dan Jaringan',
+
+                'description' => 'Program keahlian yang membekali murid dengan kompetensi instalasi, konfigurasi, dan pemeliharaan jaringan komputer.',
+
+            ],
+
+            [
+
+                'id' => 3,
+
+                'code' => 'BD',
+
+                'name' => 'Bisnis Digital',
+
+                'description' => 'Program keahlian yang membekali murid dengan kompetensi pemasaran dan pengelolaan bisnis berbasis digital.',
+
+            ],
+
+        ];
+
+        return view('majors.create', [
+            'title' => 'sistem sekolah - tambah jurusan',
+            'majors' => $majors,
+        ]
+        );
     }
 
     /**
@@ -73,7 +115,7 @@ class MajorController extends Controller
      */
     public function store(Request $request)
     {
-        return "menambahkan data jurusan baru";
+        return 'menambahkan data jurusan baru';
     }
 
     /**
@@ -81,10 +123,51 @@ class MajorController extends Controller
      */
     public function show(string $id)
     {
-        return view('majors.index',[
-                            'title'=> 'sistem sekolah - detail jurusan',
-                        ]
-                    );
+        $majors = [
+
+            [
+
+                'id' => 1,
+
+                'code' => 'AKL',
+
+                'name' => 'Akuntansi dan Keuangan Lembaga',
+
+                'description' => 'Program keahlian yang membekali murid dengan kompetensi pencatatan dan pelaporan keuangan.',
+
+            ],
+
+            [
+
+                'id' => 2,
+
+                'code' => 'TKJ',
+
+                'name' => 'Teknik Komputer dan Jaringan',
+
+                'description' => 'Program keahlian yang membekali murid dengan kompetensi instalasi, konfigurasi, dan pemeliharaan jaringan komputer.',
+
+            ],
+
+            [
+
+                'id' => 3,
+
+                'code' => 'BD',
+
+                'name' => 'Bisnis Digital',
+
+                'description' => 'Program keahlian yang membekali murid dengan kompetensi pemasaran dan pengelolaan bisnis berbasis digital.',
+
+            ],
+
+        ];
+
+        return view('majors.show', [
+            'title' => 'sistem sekolah - detail jurusan',
+            'majors' => $majors,
+        ]
+        );
     }
 
     /**
@@ -92,7 +175,51 @@ class MajorController extends Controller
      */
     public function edit(string $id)
     {
-        return "menampilkan form untuk mengedit data jurusan dengan ID: {$id}";
+        $majors = [
+
+            [
+
+                'id' => 1,
+
+                'code' => 'AKL',
+
+                'name' => 'Akuntansi dan Keuangan Lembaga',
+
+                'description' => 'Program keahlian yang membekali murid dengan kompetensi pencatatan dan pelaporan keuangan.',
+
+            ],
+
+            [
+
+                'id' => 2,
+
+                'code' => 'TKJ',
+
+                'name' => 'Teknik Komputer dan Jaringan',
+
+                'description' => 'Program keahlian yang membekali murid dengan kompetensi instalasi, konfigurasi, dan pemeliharaan jaringan komputer.',
+
+            ],
+
+            [
+
+                'id' => 3,
+
+                'code' => 'BD',
+
+                'name' => 'Bisnis Digital',
+
+                'description' => 'Program keahlian yang membekali murid dengan kompetensi pemasaran dan pengelolaan bisnis berbasis digital.',
+
+            ],
+
+        ];
+
+        return view('majors.edit', [
+            'title' => 'sistem sekolah - detail jurusan',
+            'majors' => $majors,
+        ]
+        );
     }
 
     /**

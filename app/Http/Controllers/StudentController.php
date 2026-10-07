@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Student;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
@@ -9,35 +10,26 @@ class StudentController extends Controller
     public function index()
     {
        $title = 'sistem sekolah - daftar siswa';
-       $students = [
-        [
-            'id'=> 1,
-            'nis'=> '1001',
-            'name'=> 'Andi',
-            'class'=> 'XII TKJ 2',
-            'major'=> 'TKJ'
-        ],
-        [
-            'id'=> 2,
-            'nis'=> '1002',
-            'name'=> 'Budi',
-            'class'=> 'XII TKJ 2',
-            'major'=> 'TKJ'
-        ],
-       ];
+
+       $students = Student::select(['id', 'nis', 'name', 'major', 'class'])
+       ->where( "name", '=', 'Budi')
+       ->get();
+       
+     
+       
        return view('students.index',[
         'title'=> $title,
         'students'=> $students
        ]);
     }
 
-    public function show(string $id)
+    public function show(Student $student)
     {
         $title = 'sistem sekolah - detail data siswa';
-        return view('students.show',[
-            'title' => $title
-        ]
-        );
+        return view('students.show', [
+            'title' => $title,
+            'student' => $student,
+        ]);
     }
 
     public function create()
@@ -49,26 +41,48 @@ class StudentController extends Controller
         );
     }
 
-    public function store()
+    public function store(Request $request)
     {
-        return "menambahkan data siswa baru";
+        $validatedRequest = $request->validate([
+            'nis' => ['required', 'string', 'size:10', 'unique:students,nis'],
+            'name' => ['required', 'string'],
+            'gender' => ['required', 'string', 'in:Laki laki,Perempuan'],
+            'major' => ['required', 'string', 'in:AKL,TKJ,BID'],
+            'class' => ['required', 'string'],
+        ]);
+
+        Student::create($validatedRequest);
+
+        return redirect()->route('students.index')->with('success', 'Data siswa berhasil ditambahkan');
     }
 
-    public function update(string $id)
+    public function update(Student $student, Request $request)
     {
-        return "mengubah data siswa dengan ID: {$id}";
+        $validatedRequest = $request->validate([
+            'nis' => ['required', 'string', 'size:10', 'unique:students,nis,' . $student->id],
+            'name' => ['required', 'string'],
+            'gender' => ['required', 'string', 'in:Laki laki,Perempuan'],
+            'major' => ['required', 'string', 'in:AKL,TKJ,BID'],
+            'class' => ['required', 'string'],
+        ]);
+
+        $student->update($validatedRequest);
+
+        return redirect()->route('students.index')->with('success', 'Data siswa berhasil diperbarui');
     }
     
-    public function destroy(string $id)
+    public function destroy(Student $student)
     {
-        return "menghapus data siswa dengan ID: {$id}";
+       $student->delete();
+         return redirect()->route('students.index')->with('success', 'Data siswa berhasil dihapus');
     }
 
-    public function edit(string $id)
+    public function edit(Student $student)
     {
         $title = 'sistem sekolah - ubah data siswa';
         return view('students.edit', [
-            'title'=> $title
+            'title' => $title,
+            'student' => $student,
         ]);
     }
     
